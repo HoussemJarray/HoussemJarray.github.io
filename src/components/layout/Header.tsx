@@ -4,6 +4,7 @@ import { personalInfo } from "../../data/personalInfo";
 
 const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navItems = [
     "About",
     "Projects",
@@ -21,21 +22,39 @@ const Header: React.FC = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  const closeMenu = () => setIsMenuOpen(false);
+
   return (
     <header className={`header ${isScrolled ? "header--scrolled" : ""}`}>
       <div className="container header__inner">
-        <a href="#hero" className="header__logo">
+        <a href="#hero" className="header__logo" onClick={closeMenu}>
           <div className="header__avatar">
             <img src={personalInfo.avatar} alt="Houssem Jarray" />
           </div>
           <span className="header__logo-text">Houssem Jarray</span>
         </a>
 
-        <nav className="header__nav">
+        {/* Hamburger button */}
+        <button
+          className={`hamburger ${isMenuOpen ? "hamburger--active" : ""}`}
+          onClick={toggleMenu}
+          aria-label="Toggle navigation"
+        >
+          <span className="hamburger__line"></span>
+          <span className="hamburger__line"></span>
+          <span className="hamburger__line"></span>
+        </button>
+
+        <nav className={`header__nav ${isMenuOpen ? "header__nav--open" : ""}`}>
           <ul className="header__nav-list">
             {navItems.map((item) => (
               <li key={item}>
-                <a href={`#${item.toLowerCase()}`} className="header__nav-link">
+                <a
+                  href={`#${item.toLowerCase()}`}
+                  className="header__nav-link"
+                  onClick={closeMenu}
+                >
                   {item}
                 </a>
               </li>

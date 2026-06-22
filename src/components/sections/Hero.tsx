@@ -22,7 +22,7 @@ const Hero: React.FC = () => {
             <a href="#projects" className="btn btn--primary">Projects</a>
             {/* Download CV button */}
             <a
-              href="/cv.pdf"  // Place your CV PDF in the public folder
+              href="/houssem_jarray_cv.pdf"  // Place your CV PDF in the public folder
               download
               className="btn btn--secondary"
             >
