@@ -735,6 +735,11 @@
    PROJECTS SECTION (Dopefolio Style)
    ============================================ */
 
+#projects {
+  background: var(--color-bg-alt);
+  padding-bottom: 2rem;
+}
+
 /* Grid layout */
 .projects__grid {
   display: grid;
@@ -1111,6 +1116,11 @@
 /* ============================================
    ACHIEVEMENTS & CERTIFICATIONS (with Images)
    ============================================ */
+
+#achievements {
+  background: var(--color-bg-alt);
+  padding-bottom: 2rem;
+}
 
 .achievements-grid {
   display: grid;
