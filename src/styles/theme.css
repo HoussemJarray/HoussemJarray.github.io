@@ -1,0 +1,26 @@
+:root {
+  /* Dopefolio's default primary color */
+  --color-primary: #0062b9; 
+  --color-primary-light: #ddf0ff;
+  --color-text: #2d2e32;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f9f9f9;
+  --color-border: #e8e8e8;
+  --shadow: 0 10px 25px -5px rgba(0,0,0,0.05);
+  --font-primary: 'Poppins', sans-serif;
+  --transition: all 0.3s ease;
+}
+
+[data-theme="dark"] {
+  --color-primary: #4a9eff;
+  --color-primary-light: #1a2a4a;
+  --color-text: #e2e8f0;
+  --color-bg: #0f172a;
+  --color-bg-alt: #1e293b;
+  --color-border: #334155;
+  --shadow: 0 10px 25px -5px rgba(0,0,0,0.5);
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
