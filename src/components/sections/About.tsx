@@ -3,16 +3,30 @@ import SectionWrapper from "../ui/SectionWrapper";
 import { personalInfo } from "../../data/personalInfo";
 
 const skills = [
-  "C", "C++", "Embedded C", "ARM Cortex", "STM32", "ESP32",
-  "FreeRTOS", "AUTOSAR", "MQTT", "IoT", "Python", "Git",
-  "Yocto", "U-Boot", "Linux Kernel", "Qt", "CMake", "UART/SPI/I2C"
+  "C",
+  "C++",
+  "Embedded C",
+  "ARM Cortex",
+  "STM32",
+  "ESP32",
+  "FreeRTOS",
+  "Shell",
+  "MQTT",
+  "IoT",
+  "Python",
+  "Git",
+  "Yocto",
+  "U-Boot",
+  "Linux Kernel",
+  "Qt",
+  "CMake",
+  "UART/SPI/I2C",
 ];
 
 const About: React.FC = () => {
   return (
     <SectionWrapper id="about" title="About Me">
       <div className="about__grid">
-
         {/* Left column — Bio & Social */}
         <div className="about__content">
           <h3 className="about__heading">Get to know me!</h3>
@@ -20,23 +34,21 @@ const About: React.FC = () => {
           <p className="about__bio">
             Hey! I'm <strong>Houssem Jarray</strong>, an{" "}
             <strong>Embedded Software Engineer</strong> with a degree in
-            Industrial Computer Engineering from{" "}
-            <strong>ENET'COM Sfax</strong>, specializing in intelligent and
-            interconnected systems.
+            Industrial Computer Engineering from <strong>ENET'COM Sfax</strong>,
+            specializing in intelligent and interconnected systems.
           </p>
 
           <p className="about__bio">
             I have hands-on experience in <strong>C/C++</strong>,{" "}
-            <strong>STM32</strong> microcontrollers, and communication
-            protocols like <strong>UART, SPI, I2C, and Modbus</strong>. I'm
-            particularly interested in <strong>custom embedded Linux</strong>{" "}
-            systems — working with Yocto, U-Boot, and custom kernel builds.
+            <strong>STM32</strong> microcontrollers, and communication protocols
+            like <strong>UART, SPI, I2C, and Modbus</strong>. I'm particularly
+            interested in <strong>custom embedded Linux</strong> systems —
+            working with Yocto, U-Boot, and custom kernel builds.
           </p>
-
 
           <div className="about__social">
             <a
-              href="https://github.com/Houssem-Jarray"
+              href={personalInfo.social.github}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -58,6 +70,15 @@ const About: React.FC = () => {
                 Twitter
               </a>
             )}
+            {personalInfo.social.youtube && (
+              <a
+                href={personalInfo.social.youtube}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Youtube
+              </a>
+            )}
           </div>
         </div>
 
@@ -72,7 +93,6 @@ const About: React.FC = () => {
             ))}
           </div>
         </div>
-
       </div>
     </SectionWrapper>
   );

@@ -10,8 +10,9 @@ export const personalInfo = {
   social: {
     github: "https://github.com/Houssem-Jarray",
     linkedin: "https://linkedin.com/in/houssemjarray",
-    twitter: "https://twitter.com/houssem-jarray",
+    twitter: "https://x.com/houcemjarray",
     email: "houssem.jarray@supcom.tn",
+    youtube: "https://www.youtube.com/@houssem_jarray"
   },
   avatar: Profile,
 };

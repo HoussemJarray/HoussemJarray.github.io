@@ -2,6 +2,7 @@
   /* Dopefolio's default primary color */
   --color-primary: #0062b9; 
   --color-primary-light: #ddf0ff;
+  --color-secondary: #004a8c;
   --color-text: #2d2e32;
   --color-bg: #ffffff;
   --color-bg-alt: #f9f9f9;
@@ -13,6 +14,7 @@
 
 [data-theme="dark"] {
   --color-primary: #4a9eff;
+   --color-secondary: #2a7fff; 
   --color-primary-light: #1a2a4a;
   --color-text: #e2e8f0;
   --color-bg: #0f172a;
